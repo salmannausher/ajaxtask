@@ -1,0 +1,4 @@
+
+$('#showtask').html("<%= j render partial: 'alltasks',:@task => @task %>")
+   $('#myModal').modal('toggle');
+  toastr.success("Task Successfully created")

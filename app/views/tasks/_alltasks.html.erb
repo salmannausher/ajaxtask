@@ -1,0 +1,27 @@
+<h2>All Tasks</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <%@task.each do |task|%>
+            <tr class="success">
+              <td><%= task.title%></td>
+              <td><%=task.content%></td>
+              <td><%=link_to 'Delete' ,task_path(task),method: :delete,class: 'btn btn-danger',id: "deltask",remote: true,data: { confirm: 'Are you sure?' }%>
+              <span><%=link_to 'Edit',edit_task_path(task),remote: true,class:'btn btn-warning'%></span></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

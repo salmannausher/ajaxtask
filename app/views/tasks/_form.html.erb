@@ -1,0 +1,14 @@
+
+<%= form_for Task.new , remote: true do |f| %>
+<div class="form-group">
+  <%= f.text_field :title, placeholder: "Place title" %>
+</div>
+
+<div class="form-group">
+  <%= f.text_field :content, placeholder: "Describe Your Task" %>
+</div>
+
+<div class="form-group">
+  <%= f.submit class: 'btn btn-default' %>
+</div>
+<% end %>

@@ -1,0 +1,3 @@
+$('#showtask').html("<%= j render partial: 'alltasks', :@task => @task %>")
+$('#eModal').modal('toggle')
+toastr.success("Task Successfully Updated")
